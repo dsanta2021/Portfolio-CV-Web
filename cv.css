@@ -60,6 +60,21 @@ h1, h2, h3 {
     text-align: center;
 }
 
+/* Estilos para las secciones */
+section {
+    opacity: 0; /* Iniciar con opacidad 0 */
+    transition: opacity 0.5s ease-in-out; /* Transición suave para la opacidad */
+    position: relative; /* Para el efecto de deslizamiento */
+    height: 100vh; /* Asegura que cada sección ocupe toda la altura de la vista */
+}
+
+/* Cuando la sección está en el viewport */
+section.visible {
+    opacity: 1; /* Mostrar con opacidad completa */
+}
+
+
+
 #about {
     background-color: #fff;
     padding: 40px;

@@ -1,6 +1,13 @@
-// Seleccionar el header y los enlaces de navegación
+// Const Nav
 const header = document.querySelector('header nav');
 const navLinks = document.querySelectorAll('header nav ul li a');
+
+const sections = document.querySelectorAll('section');
+const options = {
+    root: null, // Intersección con el viewport
+    rootMargin: '0px',
+    threshold: 0.5 // 50% visible para activar el efecto
+};
 
 // Función para cambiar el tamaño de la barra de navegación cuando se hace scroll
 window.addEventListener('scroll', () => {
@@ -29,4 +36,24 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Función para manejar el cambio de visibilidad
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible'); // Añadir la clase visible
+        } else {
+            entry.target.classList.remove('visible'); // Remover la clase visible
+        }
+    });
+}
+
+// Crear un Intersection Observer
+const observer = new IntersectionObserver(handleIntersection, options);
+
+// Observar cada sección
+sections.forEach(section => {
+    observer.observe(section);
+});
+
 
