@@ -8,28 +8,46 @@ body {
     color: #333;
 }
 
-/* Navegación */
+/* Estilo base de la barra de navegación */
+header nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header nav.scrolled {
+    padding: 5px 0; /* Cambiar padding cuando se hace scroll */
+    background-color: rgba(51, 51, 51, 0.9); /* Hacerla un poco transparente */
+}
+
 header nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    padding: 10px;
-    background-color: #333;
-}
-
-header nav ul li {
-    margin: 0 20px;
+    padding: 15px 0;
+    margin: 0;
+    transition: padding 0.3s ease;
 }
 
 header nav ul li a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    padding: 10px 20px;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a.active {
+    color: #f39c12;
 }
 
 header nav ul li a:hover {
     color: #f39c12;
 }
+
 
 /* Secciones */
 section {
@@ -93,6 +111,10 @@ button {
 
 button:hover {
     background-color: #f39c12;
+}
+
+button, a {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Pie de página */
