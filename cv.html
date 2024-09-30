@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mi Portafolio - David</title>
+    <link rel="stylesheet" href="cv.css">
+    <script src="cv.js" defer></script>
+
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h1>¡Hola, soy David Santa Cruz!</h1>
+        <p> 
+            Soy estudiante de 4º año en la especialidad de imagen y sonido dentro de la ingeniería de telecomunicaciones, con una fuerte inclinación hacia el desarrollo front-end y las redes de comunicación. Mi formación me ha permitido obtener una base sólida en áreas como la transmisión de datos, procesamiento de señales y tecnologías multimedia, lo que me ha despertado un gran interés en la interacción entre el diseño y la funcionalidad en entornos digitales.
+            Actualmente, estoy en la búsqueda de oportunidades que me permitan aplicar mis conocimientos técnicos en proyectos reales y desafiarme en entornos profesionales dinámicos. A lo largo de mi formación, he desarrollado una mentalidad analítica y creativa, lo que me facilita encontrar soluciones innovadoras a problemas complejos.
+            Me considero una persona proactiva, con una actitud orientada al aprendizaje continuo y al trabajo colaborativo. Las experiencias académicas y personales me han enseñado la importancia del trabajo en equipo, la comunicación eficaz y la adaptabilidad en proyectos multidisciplinarios. Mi objetivo es seguir creciendo profesionalmente en un entorno donde pueda aportar valor, aprender de mis compañeros y enfrentar nuevos retos.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="project">
+            <h3>Proyecto 1</h3>
+            <p>Descripción breve del proyecto.</p>
+            <a href="#">Ver proyecto</a>
+        </div>
+        <div class="project">
+            <h3>Proyecto 2</h3>
+            <p>Descripción breve del proyecto.</p>
+            <a href="#">Ver proyecto</a>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Lenguaje de programación 1</li>
+            <li>Lenguaje de programación 2</li>
+            <li>Herramienta/Tecnología 1</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 David Santa Cruz. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
